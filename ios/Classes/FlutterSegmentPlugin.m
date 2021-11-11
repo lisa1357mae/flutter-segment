@@ -1,7 +1,6 @@
 #import "FlutterSegmentPlugin.h"
-#import <Analytics/SEGAnalytics.h>
-#import <Analytics/SEGContext.h>
-#import <Analytics/SEGMiddleware.h>
+#import <Segment/SEGAnalytics.h>
+#import <Segment/SEGMiddleware.h>
 
 @implementation FlutterSegmentPlugin
 // Contents to be appended to the context
