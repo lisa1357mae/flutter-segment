@@ -1,3 +1,6 @@
+## 4.0.0
+* remove amplitude dependency
+
 ## 3.4.1
 * iOS: re-add `s.static_framework = true` in `podspec`
 

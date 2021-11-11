@@ -1,26 +1,26 @@
 name: flutter_segment
-description: Flutter implementation of Segment Analytics for iOS, Android and Web
-version: 3.4.1
-homepage: https://www.claimsforce.com
-repository: https://github.com/claimsforce-gmbh/flutter-segment
-issue_tracker: https://github.com/claimsforce-gmbh/flutter-segment/issues
-documentation: https://github.com/claimsforce-gmbh/flutter-segment#readme
+description: Flutter implementation of Segment Analytics for iOS, Android
+version: 4.0.0
+homepage: https://www.wildflowers.love/
+repository: https://github.com/lisa1357mae/flutter-segment
+issue_tracker: https://github.com/lisa1357mae/flutter-segment/issues
+documentation: https://github.com/lisa1357mae/flutter-segment#readme
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: ">=1.12.13+hotfix.4 <2.0.0"
-
+  sdk: '>=2.14.0 <3.0.0'
+  flutter: ">2.0.0"
+q
 dependencies:
   flutter:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  meta: ^1.3.0
+  meta: ^1.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint: 1.6.0
+  lint: ^1.7.2
 
 flutter:
   plugin:
@@ -30,6 +30,3 @@ flutter:
         pluginClass: FlutterSegmentPlugin
       ios:
         pluginClass: FlutterSegmentPlugin
-      web:
-        pluginClass: SegmentWeb
-        fileName: src/segment_web.dart

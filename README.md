@@ -93,7 +93,6 @@ void main() {
     options: SegmentConfig(
       writeKey: 'YOUR_WRITE_KEY_GOES_HERE',
       trackApplicationLifecycleEvents: false,
-      amplitudeIntegrationEnabled: false,
       debug: false,
     ),
   );
@@ -183,7 +182,7 @@ A few important points:
 - `setContext` is not persisted after the application is closed
 
 ## Setting integration options
-If you intend to use any specific integrations with third parties, such as custom Session IDs for Amplitude, you'll need to set it using options for each call, or globally when the application was started.
+If you intend to use any specific integrations with third parties, you'll need to set it using options for each call, or globally when the application was started.
 
 ### Setting the options in every call
 
@@ -194,17 +193,12 @@ The methods below support `options` as parameters:
 - `group({@required String groupId, Map<String, dynamic> traits, Map<String, dynamic> options})`
 - `alias({@required String alias, Map<String, dynamic> options})`
 
-An example of a screen being tracked as part of a session, which will be communicated to Amplitude:
+An example of a screen being tracked as part of a session:
 
 ```dart
 Segment.screen(
   screenName: screenName,
   properties: {},
-  options: {
-    'integrations': {
-      'Amplitude': {'session_id': '1578083527'}
-    }
-  },
 )
 ```
 

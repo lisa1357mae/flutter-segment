@@ -1,13 +1,11 @@
 class SegmentConfig {
   final String writeKey;
   final bool trackApplicationLifecycleEvents;
-  final bool amplitudeIntegrationEnabled;
   final bool debug;
 
   SegmentConfig({
     required this.writeKey,
     this.trackApplicationLifecycleEvents = false,
-    this.amplitudeIntegrationEnabled = false,
     this.debug = false,
   });
 
@@ -15,7 +13,6 @@ class SegmentConfig {
     return {
       'writeKey': writeKey,
       'trackApplicationLifecycleEvents': trackApplicationLifecycleEvents,
-      'amplitudeIntegrationEnabled': amplitudeIntegrationEnabled,
       'debug': debug,
     };
   }
