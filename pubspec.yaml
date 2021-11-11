@@ -9,7 +9,7 @@ documentation: https://github.com/lisa1357mae/flutter-segment#readme
 environment:
   sdk: '>=2.14.0 <3.0.0'
   flutter: ">2.0.0"
-q
+
 dependencies:
   flutter:
     sdk: flutter
