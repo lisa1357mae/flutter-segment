@@ -1,3 +1,6 @@
+## 4.0.1
+* merge 3.x changes in from upstream
+
 ## 4.0.0
 ### BREAKING CHANGE
 * remove amplitude dependency

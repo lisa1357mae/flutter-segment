@@ -1,6 +1,6 @@
 name: flutter_segment
 description: Flutter implementation of Segment Analytics for iOS, Android
-version: 4.0.0
+version: 4.0.1
 homepage: https://www.wildflowers.love/
 repository: https://github.com/lisa1357mae/flutter-segment
 issue_tracker: https://github.com/lisa1357mae/flutter-segment/issues
