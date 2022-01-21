@@ -1,6 +1,7 @@
 #import "FlutterSegmentPlugin.h"
-#import <Analytics/SEGAnalytics.h>
-#import <Analytics/SEGMiddleware.h>
+#import <Segment/SEGAnalytics.h>
+#import <Segment/SEGContext.h>
+#import <Segment/SEGMiddleware.h>
 
 @implementation FlutterSegmentPlugin
 // Contents to be appended to the context
@@ -156,7 +157,7 @@ static BOOL wasSetupFromFile = NO;
     result([FlutterError
       errorWithCode:@"FlutterSegmentException"
       message:[exception reason]
-      details: nil]);
+      details: [NSThread  callStackSymbols].description]);
   }
 
 }
@@ -171,7 +172,7 @@ static BOOL wasSetupFromFile = NO;
     result([FlutterError
       errorWithCode:@"FlutterSegmentException"
       message:[exception reason]
-      details: nil]);
+      details: [NSThread  callStackSymbols].description]);
   }
 
 }
@@ -181,16 +182,18 @@ static BOOL wasSetupFromFile = NO;
     NSString *userId = call.arguments[@"userId"];
     NSDictionary *traits = call.arguments[@"traits"];
     NSDictionary *options = call.arguments[@"options"];
+
     [[SEGAnalytics sharedAnalytics] identify: userId
                       traits: traits
                      options: options];
+
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
     result([FlutterError
       errorWithCode:@"FlutterSegmentException"
       message:[exception reason]
-      details: nil]);
+      details: @"[NSThread  callStackSymbols].description"]);
   }
 }
 
@@ -205,7 +208,10 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError
+      errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -220,7 +226,10 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError
+      errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -235,7 +244,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -248,7 +259,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -258,7 +271,9 @@ static BOOL wasSetupFromFile = NO;
     result(anonymousId);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -268,7 +283,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -278,7 +295,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -288,7 +307,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 
@@ -299,7 +320,9 @@ static BOOL wasSetupFromFile = NO;
     result([NSNumber numberWithBool:YES]);
   }
   @catch (NSException *exception) {
-    result([FlutterError errorWithCode:@"FlutterSegmentException" message:[exception reason] details: nil]);
+    result([FlutterError errorWithCode:@"FlutterSegmentException"
+      message:[exception reason]
+      details: [NSThread  callStackSymbols].description]);
   }
 }
 

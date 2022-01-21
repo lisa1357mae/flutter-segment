@@ -1,5 +1,9 @@
 ## 4.0.0
+### BREAKING CHANGE
 * remove amplitude dependency
+
+## 3.5.0
+* iOS: we are forcing to use `use_frameworks!`
 
 ## 3.4.1
 * iOS: re-add `s.static_framework = true` in `podspec`
