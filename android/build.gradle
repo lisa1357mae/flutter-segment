@@ -34,7 +34,8 @@ android {
     }
 
     dependencies {
-        implementation 'com.segment.analytics.android:analytics:4.10.0'
+        implementation 'com.segment.analytics.android:analytics:4.10.1'
+        //implementation 'com.segment.analytics.android:analytics:4.10.0'
     }
 }
 
